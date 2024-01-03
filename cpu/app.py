@@ -44,7 +44,7 @@ def calculate_time(func):
             start_time = time.time()
             func(*args, **kwargs)
             end_time = time.time()
-        write_output(str(end_time - start_time))
+            write_output(str(end_time - start_time))
 
     return wrapper
 
