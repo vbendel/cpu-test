@@ -37,7 +37,7 @@ def find_primes(start, end):
         primes = []
         for i in range(start, end + 1):
             if is_prime(i):
-            primes.append(i)
+                primes.append(i)
         return primes
 
 
