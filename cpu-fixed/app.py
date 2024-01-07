@@ -49,4 +49,4 @@ def write_output(total_time: str):
     file.close()
 
 if __name__ == '__main__' :
-    async_calculate()
+    find_primes (START, END)
