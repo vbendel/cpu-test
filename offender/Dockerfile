@@ -4,6 +4,7 @@ RUN mkdir /app
 WORKDIR /app
 COPY ./app.py /app/
 COPY ./requirements.txt /app/
-RUN pip install -r requirements.txt && dnf install -y numactl util-linux*
+RUN dnf install -y numactl util-linux
+RUN pip install -r requirements.txt
 CMD ["lscpu"]
 CMD ["numactl", "-m", "0,1,2", "-N", "0,1,2", "python", "app.py"]
