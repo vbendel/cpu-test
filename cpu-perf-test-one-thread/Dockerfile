@@ -8,4 +8,4 @@ COPY ./cpu_pack/ /opt/app-root/src/
 COPY ./cpu_pack/ /app/
 #RUN dnf install -y numactl util-linux
 RUN pip install -r requirements.txt
-CMD ["LD_LIBRARY_PATH=.", "./numactl", "-m", "1", "-N", "1", "python3", "app.py"]
+CMD ["LD_LIBRARY_PATH=/app", "./numactl", "-m", "1", "-N", "1", "python3", "app.py"]
